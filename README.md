@@ -23,15 +23,22 @@ Built for Windows, with local Dutch and English detection and a practical workfl
 
 ## Watch the workflow
 
-**43 seconds · English captions · No audio**
+**36 seconds · Real ChatGPT reply · English captions · No audio**
 
-https://github.com/user-attachments/assets/fb33b2cd-1da2-40e9-83da-67dc8c729765
+https://github.com/user-attachments/assets/799c87f6-0f0b-4cf9-8cb5-5ed45c2f6072
 
-Double Copy → review and manual corrections → confirm → restore the reply → swap and undo → copy the checked answer.
+An ordinary email → green placeholders → ChatGPT → copy the answer twice → review restored values in blue → copy the finished email.
 
-[Download the MP4](assets/wexvo-walkthrough.mp4) · [Read the steps](#a-small-step-before-you-share)
+[Download the MP4](assets/wexvo-chatgpt-workflow.mp4) · [Manual corrections, swaps and undo](assets/wexvo-walkthrough.mp4) · [Read the steps](#a-small-step-before-you-share)
 
-<sub>Recorded from the running Wexvo interface with fictional email text. Captions and pointer added. The example AI reply was written locally; no AI service was contacted.</sub>
+<sub>An edited demonstration with fictional email text, an actual ChatGPT response and the running Wexvo interface. Only the masked email was sent to ChatGPT. Wexvo performs masking and restoration locally.</sub>
+
+<details>
+<summary>About this recording</summary>
+
+The browser and Wexvo were captured separately, with isolated clipboards, to avoid recording or changing the user's desktop. The exact copied ChatGPT response was transferred to the demo session, where real Qt copy events opened the restore review using the previously confirmed mapping. Captions, keyboard hints and cuts were added. This is a workflow demonstration, not a continuous recording or an end-to-end Windows clipboard compatibility test.
+
+</details>
 
 ## See Wexvo in action
 
