@@ -125,24 +125,40 @@ The existing **Restore Answer** button / **Ctrl+R** follows its separate editor 
 
 ## Validation and current status
 
-**Current local build: 1.1.8 · Verified 27 October 2026**
+**Current build: 1.1.9 · Verified 29 October 2026**
+
+### Measured on public, human-annotated data
+
+Measured on a sealed test split that was run once, after development, without tuning on it.
+
+| Dataset | Fully masked |
+| :--- | ---: |
+| English court judgments (Text Anonymization Benchmark): all direct identifiers | **98.9%** |
+| — of which person names / case numbers | 98.7% / 100% |
+| Dutch news (CoNLL-2002): person names | **93.0%** (Max coverage on), 92.1% (off) |
+| Real system logs (Loghub, 10 systems): IP addresses / host names | 100% / 100% |
+| Words masked outside any annotation | 1.5–3.1% |
+
+These datasets contain no Dutch citizen service numbers, IBANs or Dutch addresses; those detectors are validated separately. Roughly 1 in 14 names in Dutch news stayed readable, mostly author initials in brackets.
+
+### Technical verification
 
 | Verification | Recorded result |
 | :--- | :--- |
-| Unit suite | **385 tests per configuration**, passed with source and native cores, Max coverage on and off |
+| Unit suite | **395 tests per configuration**, passed with source and native cores, Max coverage on and off |
 | Full regression matrix | **86 jobs passed**: 54 detection jobs, 28 GUI jobs and 4 unit-suite jobs |
 | Windows packages | Both single-file and portable EXEs passed **--selftest** |
-| Packaging checks | Ten native core modules in each package; bundled lexicon resources verified |
+| Packaging checks | **All 22 own modules** compiled to native code; no Wexvo Python source or bytecode in the package |
 | Temporary extraction | Single-file extraction removed after selftest; portable selftest created no extraction directory |
 
-These are recorded local results, **not live CI, an independent certification or a guarantee of perfect detection**. Earlier GUI failures were retained and investigated; final checks passed after the test desktop binding was corrected, without changing their assertions or keyboard input.
+These are recorded local results, **not live CI, an independent certification or a guarantee of perfect detection**.
 
 <details>
 <summary><strong>Known detection limitations and external evaluation</strong></summary>
 
-The latest build fixes specific false positives in education/correspondence context and the missed start of clock-time ranges. It does not eliminate all detection errors.
+Build 1.1.9 adds detection of case and file numbers, completes half-detected names, and stops reading class paths, components and units in machine logs as names. It does not eliminate all detection errors.
 
-An existing benchmark of **77 externally sourced, openly licensed fictional emails** was rechecked in both detection modes with fresh and shared sessions. On the reviewed fragments, **70 unwanted masks in the development split and 80 in the previously reviewed holdout remain**, alongside **8 incomplete known full-name occurrences in development and 0 in holdout**. Restore round-trip failures were zero. These counts are not document-level error rates or overall precision/recall; the annotations are partial, and this reused holdout is a regression set rather than a new independent evaluation.
+An existing benchmark of **77 externally sourced, openly licensed fictional emails** was rechecked in both detection modes with fresh and shared sessions. On the reviewed fragments, **70 unwanted masks in the development split and 80–82 in the previously reviewed holdout remain** (the range reflects two build environments), alongside **8 incomplete known full-name occurrences in development and 0 in holdout**. Restore round-trip failures were zero. These counts are not document-level error rates or overall precision/recall; the annotations are partial, and this reused holdout is a regression set rather than a new independent evaluation.
 
 Those accuracy audits still report failure. They are separate from the passing technical regression matrix. Neither the screenshots nor the regression totals establish that the tool is ready for unattended handling of confidential documents.
 
@@ -152,9 +168,9 @@ Those accuracy audits still report failure. They are separate from the passing t
 
 **Windows · Python · PySide6 · spaCy · Regex · ONNX Runtime · Cython/MSVC · PyInstaller**
 
-Wexvo is under private development. This repository currently contains the project presentation and visual assets; application source code and executables are not published here. No public download or open-source licence is announced.
+Wexvo is under private development. This repository contains the project presentation and visual assets; application source code is not published here. Builds for repository collaborators are attached to [Releases](../../releases), with SHA-256 checksums. No public download or open-source licence is announced.
 
-Next priorities: independent evaluation, clean-machine Windows checks and usability feedback from realistic workflows.
+Next priorities: clean-machine Windows checks, code signing and usability feedback from realistic workflows.
 
 ---
 
