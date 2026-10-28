@@ -1,112 +1,141 @@
 <p align="center">
-  <img src="assets/wexvo_logo.png" alt="Wexvo" width="280">
+  <img src="assets/hero.svg" alt="Wexvo — Sensitive text. Local control. Offline Windows privacy workspace." width="100%">
 </p>
 
-<h1 align="center">Sensitive text. Local control.</h1>
+<p align="center"><strong>Offline by design.</strong> Human review before sharing.</p>
 
 <p align="center">
-  Review, mask and restore sensitive text before sharing it with AI.
-</p>
-
-<p align="center">
-  <strong>Windows desktop</strong> · <strong>Offline processing</strong> · <strong>Dutch & English</strong>
+  <a href="#see-wexvo-in-action">Preview</a> &nbsp;·&nbsp;
+  <a href="#a-small-step-before-you-share">How it works</a> &nbsp;·&nbsp;
+  <a href="#everyday-controls">Controls</a> &nbsp;·&nbsp;
+  <a href="#privacy-with-clear-boundaries">Privacy</a> &nbsp;·&nbsp;
+  <a href="#validation-and-current-status">Validation</a>
 </p>
 
 ---
 
-Wexvo is a Windows desktop application that helps you prepare sensitive text for use with AI assistants. It detects personal information and technical identifiers locally, replaces them with placeholders, and lets you review the result before copying it. When an AI response contains known placeholders, Wexvo can restore the corresponding values from the active session.
+Wexvo helps you prepare sensitive text before pasting it into an AI assistant. It replaces detected identities with placeholders, keeps the result available for review, and can restore known placeholders in the answer using the active session.
 
-Built around a practical workflow for IT logs, security reports and everyday documents: keep useful context, review sensitive details and stay in control of what you share.
+Built for Windows, with local Dutch and English detection and a practical workflow for technical logs, correspondence and document text.
 
-> **Beta · Private development**
-> Detection can miss sensitive information or mask useful context. Always review the output. This tool does not decide whether you are permitted to share a document.
+> **Private beta.** Automated detection can miss sensitive data or mask useful context. Always review before sharing.
 
-## One workflow, in both directions
+## See Wexvo in action
 
-| Prepare a prompt | Restore an answer |
-| :--- | :--- |
-| Copy the same text twice to open Quick Review. | Copy an AI answer containing Wexvo placeholders twice. |
-| Inspect the masked output and add manual corrections. | Inspect restored values in the compact review window. |
-| Choose **Kopiëren en sluiten** or press **Ctrl+Enter**. | Check the result, then explicitly copy it. |
-| Paste the reviewed text into your chosen application. | Paste the reviewed answer into your document. |
+<p align="center">
+  <img src="assets/workspace.png" alt="Actual Wexvo editor with fictional terminal output: network identities masked while services, ports, software versions and a CVE remain readable." width="100%">
+</p>
 
-Double Copy is enabled when no preference has been saved. It can be disabled or adjusted in Options. It relies on clipboard updates; copying conventions vary between applications.
+<p align="center"><sub>The full workspace: original text on the left, reviewed output on the right.</sub></p>
 
-## Designed for review
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>Review what leaves your device</h3>
+      <img src="assets/quick-review.png" alt="Actual Quick Review showing a fictional email with green placeholders and Copy and close, Open full editor and Cancel controls.">
+      <p>Inspect green placeholders, add manual redactions and confirm when you are ready.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>Review what comes back</h3>
+      <img src="assets/restore-review.png" alt="Actual restoration review showing fictional original values highlighted in blue and the Undo swap control.">
+      <p>Inspect restored values in blue. Swap blocks when needed, then explicitly copy the answer.</p>
+    </td>
+  </tr>
+</table>
 
-**Quick Review** keeps the original text hidden by default and shows a category summary. Click a word to mask it everywhere, or select text and use **Redact everywhere**. **Undo Manual** reverses manual masking.
+<sub>Actual application captures, rendered offscreen with newly written fictional examples. The header is an illustration. No private documents or real contact details are shown.</sub>
 
-**Visible restoration** highlights restored values in blue. Drag one restored block onto another to swap values, and use **Undo wissel** to reverse a swap. Unknown or ambiguous placeholders remain visibly flagged for review.
+## A small step before you share
 
-**A full editor when needed** provides more room for large documents. Opening the full editor transfers the current review and its changes without repeating the analysis. Copying in the full editor keeps the window open.
+| 1 · Copy twice | 2 · Review locally | 3 · Confirm and paste |
+| :--- | :--- | :--- |
+| Select text and press **Ctrl+C twice** in quick succession. | Check the masked result. Click a word to redact it everywhere, or select text and choose **Redact everywhere**. | Choose **Copy and close**, or press **Ctrl+Enter**. Then paste into your chosen application. |
 
-**Background access** includes a tray icon and configurable Windows global shortcuts. The optional blind clipboard action processes text without a review window; use it only when that behaviour is appropriate for your workflow.
+**For the return journey:** copy an AI answer containing Wexvo placeholders twice. Wexvo shows the restored answer for review when the relevant mapping is available. Confirm to copy it back to your document.
 
-## Technical context matters
+Keep the same Wexvo session open throughout the round trip. Unknown or unavailable placeholders cannot be reconstructed; they require attention rather than guessed values.
 
-Wexvo combines pattern matching, Dutch and English language models, and contextual rules. Detection covers categories such as names, contact details, addresses, identifiers, credentials, IP addresses and hostnames.
+Double Copy starts enabled, with a default interval of **600 ms**. Adjust it or turn it off in **Options → Double Copy…**. These choices last only until Wexvo closes. Detection relies on clipboard updates, so behaviour can vary between applications.
 
-For terminal output and logs, the goal is to preserve information needed for diagnosis, including service names, ports, software versions and CVE identifiers. Synthetic regression cases cover network scans, authentication logs, HTTP output and other technical formats. Exact behaviour depends on context and must be checked in the review.
+## Made for useful context
 
-## Documents and text
+| Everyday text | Technical output | Document workflows |
+| :--- | :--- | :--- |
+| Review names, contact details, addresses and identifiers in correspondence. | Mask network identities and credentials while aiming to preserve services, ports, software versions and CVE references. | Import text from TXT, Word, PowerPoint, Excel, PDF and supported images, with local OCR where needed. |
 
-| Input | Processing |
-| :--- | :--- |
-| Clipboard and plain text | Local analysis and editable masked output |
-| Word, PowerPoint and Excel | Text extraction for review |
-| PDF | Text extraction, with local OCR where needed |
-| Supported images | Local OCR before text analysis |
+**Manual corrections stay close to the text.** Use **Undo Manual** to reverse a manual redaction. Restored blue blocks can be dragged onto one another to swap values; **Undo swap** reverses the last swap.
 
-Document import produces text for review. It is not a claim that the original file has been permanently redacted or that its original layout and metadata have been sanitised.
+**More room when you need it.** Choose **Open full editor** to carry the current review into the full workspace without repeating the analysis. Copying in the full editor leaves it open.
 
-## Privacy boundaries
-
-- Detection and document processing run locally, using bundled models in the Windows build.
-- The application does not require an AI account or a remote inference service.
-- Placeholder mappings belong to the active session; they are not a permanent recovery archive. Closing the application or using **Wipe All** removes the application's session state.
-- Only known, available mappings can restore placeholders. Keep the relevant session open while completing a round trip.
-- Automatic cleanup and cancellation protect the review workflow, but are not a forensic guarantee that operating-system memory, paging, crash dumps or other applications contain no copies.
-- Any external application receives the content you choose to paste into it. Masking identifiers does not remove every form of confidential information.
+Document import extracts text for review. It does **not** certify that the original file, its layout or its metadata has been permanently sanitised.
 
 ## Everyday controls
 
-| Action | Control |
+| Where | Action | Control |
+| :--- | :--- | :--- |
+| Any supported application | Open a compact review | Select text, then press **Ctrl+C twice** |
+| Quick Review | Copy the reviewed result and close | **Ctrl+Enter** or **Copy and close** |
+| Quick Review | Cancel without copying | **Esc** or **Cancel** |
+| Full editor | Paste replacement input | **Ctrl+V** |
+| Full editor | Copy the current redacted or restored result | **Ctrl+Shift+C** or the copy button |
+| Full editor | Use the existing Restore Answer action | **Ctrl+R** or **Restore Answer** |
+| System tray | Show or hide the workspace | Left-click the Wexvo icon |
+| Options | Configure optional Windows global hotkeys | **Global shortcuts…** |
+| Options | Adjust Double Copy | **Double Copy…** |
+| Options | Open the interactive introduction | **Quick tour…** |
+| Tray menu | Exit completely | **Exit Wexvo Completely** |
+
+**Global hotkeys are configurable, not a requirement.** Use the combinations shown in your current **Global shortcuts…** settings. Windows or another application may already reserve a combination. The tray icon and Double Copy provide alternative access.
+
+<details>
+<summary><strong>Restore actions and clipboard behaviour</strong></summary>
+
+The recommended Double Copy workflow opens a review before copying redacted or restored text. **Copy and close** confirms that review; **Cancel** does not copy it. A pending redaction mapping is committed only on confirmation. Moving a pending review to the full editor does not itself commit it.
+
+The existing **Restore Answer** button / **Ctrl+R** follows its separate editor workflow: it displays the answer and also copies successfully restored text. The optional **Blind Redact / Restore** action can update the clipboard without a review window. Choose Double Copy when you want to check the result before it reaches the clipboard.
+
+</details>
+
+## Privacy with clear boundaries
+
+- **Local processing.** Detection and document processing use the bundled runtime and models. No AI account or remote inference service is required.
+- **Session-only state.** Preferences and placeholder mappings live in memory. Closing Wexvo or choosing **Wipe All** removes the application's session state; the safety timer can also expire review or clipboard data.
+- **Explicit sharing.** You decide which reviewed content to paste into another application. Masking identifiers does not remove every kind of confidential information or determine whether sharing is permitted.
+- **No forensic promise.** Application cleanup cannot guarantee that Windows paging, crash dumps, clipboard tools or other software retain no copies. The single-file Windows build temporarily extracts its runtime; the portable-folder build avoids that extraction.
+
+## Validation and current status
+
+**Current local build: 1.1.8 · Verified 27 October 2026**
+
+| Verification | Recorded result |
 | :--- | :--- |
-| Open a compact review | Copy identical text twice within the configured interval |
-| Confirm Quick Review | **Ctrl+Enter** / **Kopiëren en sluiten** |
-| Cancel Quick Review | **Esc** / **Annuleren** |
-| Show or hide Wexvo | Click the tray icon |
-| Instant popup | **Win+Shift+W** by default |
-| Blind Redact / Restore | **Win+Shift+X** by default |
-| Change global shortcuts | **Options → Global shortcuts…** |
-| Adjust Double Copy | **Options → Dubbel-Copy…** |
-| Exit the application | **Exit Wexvo Completely** in the tray menu |
+| Unit suite | **385 tests per configuration**, passed with source and native cores, Max coverage on and off |
+| Full regression matrix | **86 jobs passed**: 54 detection jobs, 28 GUI jobs and 4 unit-suite jobs |
+| Windows packages | Both single-file and portable EXEs passed **--selftest** |
+| Packaging checks | Ten native core modules in each package; bundled lexicon resources verified |
+| Temporary extraction | Single-file extraction removed after selftest; portable selftest created no extraction directory |
 
-## Validation
+These are recorded local results, **not live CI, an independent certification or a guarantee of perfect detection**. Earlier GUI failures were retained and investigated; final checks passed after the test desktop binding was corrected, without changing their assertions or keyboard input.
 
-The latest local verification on **24 October 2026** completed with:
+<details>
+<summary><strong>Known detection limitations and external evaluation</strong></summary>
 
-| Check | Result |
-| :--- | :--- |
-| Unit suite | 270 tests passed |
-| Windows GUI regression checks | 329 checks passed |
-| Redteam audits and holdout checks | No failures in the final run |
-| Synthetic stress and name-context checks | No failures in the final run |
-| Large Word document checks | Three generated documents, approximately 68–69k characters each, checked in both detection modes |
-| Packaged executable | Built with the existing `wexvo.spec`; `--selftest` exited successfully |
+The latest build fixes specific false positives in education/correspondence context and the missed start of clock-time ranges. It does not eliminate all detection errors.
 
-These are local regression results, not a live CI badge, independent security certification or a guarantee of perfect detection. The final GUI checks were run serially with access to the Windows clipboard. Two clipboard assertions failed in an earlier run and passed in the isolated and final complete reruns; that intermittent behaviour remains relevant when assessing reliability.
+An existing benchmark of **77 externally sourced, openly licensed fictional emails** was rechecked in both detection modes with fresh and shared sessions. On the reviewed fragments, **70 unwanted masks in the development split and 80 in the previously reviewed holdout remain**, alongside **8 incomplete known full-name occurrences in development and 0 in holdout**. Restore round-trip failures were zero. These counts are not document-level error rates or overall precision/recall; the annotations are partial, and this reused holdout is a regression set rather than a new independent evaluation.
 
-New domain and document fixtures are synthetic. They include IT, legal, medical, education, financial and everyday text, with explicit checks for sensitive values and context that should remain readable.
+Those accuracy audits still report failure. They are separate from the passing technical regression matrix. Neither the screenshots nor the regression totals establish that the tool is ready for unattended handling of confidential documents.
 
-## Implementation
+</details>
 
-**Python · PySide6 · spaCy · Regex · ONNX Runtime · PyInstaller**
+## Project
 
-The application uses background workers for analysis, a central clipboard service, and pending review mappings that are committed on explicit confirmation. The Windows package includes its runtime and models. Development dependency installation is separate from offline application use.
+**Windows · Python · PySide6 · spaCy · Regex · ONNX Runtime · Cython/MSVC · PyInstaller**
 
-## Project status
+Wexvo is under private development. This repository currently contains the project presentation and visual assets; application source code and executables are not published here. No public download or open-source licence is announced.
 
-Wexvo is under private development. No public release or public source licence is announced on this page. Distribution instructions, repository documentation links and release downloads will be added when the first upload has been reviewed.
+Next priorities: independent evaluation, clean-machine Windows checks and usability feedback from realistic workflows.
 
-Near-term priorities are independent evaluation, clean-machine Windows testing, usability feedback and a reviewed distribution process.
+---
+
+<p align="center"><sub>Wexvo · Sensitive text. Local control.</sub></p>
