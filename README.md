@@ -5,6 +5,7 @@
 <p align="center"><strong>Offline by design.</strong> Human review before sharing.</p>
 
 <p align="center">
+  <a href="#watch-the-workflow">Video</a> &nbsp;·&nbsp;
   <a href="#see-wexvo-in-action">Preview</a> &nbsp;·&nbsp;
   <a href="#a-small-step-before-you-share">How it works</a> &nbsp;·&nbsp;
   <a href="#everyday-controls">Controls</a> &nbsp;·&nbsp;
@@ -19,6 +20,18 @@ Wexvo helps you prepare sensitive text before pasting it into an AI assistant. I
 Built for Windows, with local Dutch and English detection and a practical workflow for technical logs, correspondence and document text.
 
 > **Private beta.** Automated detection can miss sensitive data or mask useful context. Always review before sharing.
+
+## Watch the workflow
+
+**43 seconds · English captions · No audio**
+
+https://github.com/user-attachments/assets/fb33b2cd-1da2-40e9-83da-67dc8c729765
+
+Double Copy → review and manual corrections → confirm → restore the reply → swap and undo → copy the checked answer.
+
+[Download the MP4](assets/wexvo-walkthrough.mp4) · [Read the steps](#a-small-step-before-you-share)
+
+<sub>Recorded from the running Wexvo interface with fictional email text. Captions and pointer added. The example AI reply was written locally; no AI service was contacted.</sub>
 
 ## See Wexvo in action
 
