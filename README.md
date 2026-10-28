@@ -23,20 +23,20 @@ Built for Windows, with local Dutch and English detection and a practical workfl
 
 ## Watch the workflow
 
-**45 seconds · Live Chrome + Wexvo · 1920 × 1200 · English captions**
+**59 seconds · Double Copy from your app · 1920 × 1200 · English captions**
 
-https://github.com/user-attachments/assets/2913a926-dce3-4e7a-b02d-8df1bd0e2ab0
+https://github.com/user-attachments/assets/d6bface5-82a5-4987-8774-f0e55b0eaa47
 
-An ordinary email → green placeholders → ChatGPT → copy the answer twice → review restored values in blue → copy the finished email.
+Select text in your app → press Ctrl+C twice → Quick Review opens automatically → review the green placeholders → ChatGPT → copy its answer twice → review restored values in blue.
 
-[Download the full-resolution MP4](assets/wexvo-live-chrome.mp4) · [Manual corrections, swaps and undo](assets/wexvo-walkthrough.mp4) · [Read the steps](#a-small-step-before-you-share)
+[Download the full-resolution MP4](assets/wexvo-background-workflow.mp4) · [Manual corrections, swaps and undo](assets/wexvo-walkthrough.mp4) · [Read the steps](#a-small-step-before-you-share)
 
-<sub>Recorded on Windows with Google Chrome and the Wexvo executable. The real ChatGPT answer is copied through the Windows clipboard; Wexvo opens the blue restoration review automatically. All example identities are fictional. Use fullscreen for the clearest text.</sub>
+<sub>Start with Wexvo running in the background: select text and copy twice to open Quick Review. No need to open the full editor. Recorded with fictional email text in Notepad, Google Chrome and the Wexvo executable. Use fullscreen for the clearest text.</sub>
 
 <details>
 <summary>About this recording</summary>
 
-This version uses a real desktop recording with the existing Wexvo executable and Chrome. Setup and idle time were cut, and English captions and a final close-up were added. The sequence from selecting the ChatGPT answer through the automatic appearance of the blue restore review is uncut. No separate clipboard bridge or recreated application screen is used. This demonstrates the recorded workflow on this machine; clipboard behaviour can vary between applications and systems.
+The new opening records a fictional email in Notepad: selection, Double Copy and the automatic green Quick Review, with the full Wexvo editor hidden. It is followed by the previously recorded real Chrome round trip. These are separate recording sessions, so placeholder labels differ; the transition is labelled in the video. Setup and idle time were cut, and English captions and a final close-up were added. The sequence from selecting the ChatGPT answer through the automatic blue restore review remains uncut. No separate clipboard bridge or recreated application screen is used. Clipboard behaviour can vary between applications and systems.
 
 </details>
 
