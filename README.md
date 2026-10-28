@@ -23,10 +23,10 @@ Built for Windows, with local Dutch and English detection and a practical workfl
 ## See Wexvo in action
 
 <p align="center">
-  <img src="assets/workspace.png" alt="Actual Wexvo editor with fictional terminal output: network identities masked while services, ports, software versions and a CVE remain readable." width="100%">
+  <img src="assets/workspace.png" alt="Actual Wexvo editor with a fictional everyday email: names, an email address and meeting times are masked while the message remains readable." width="100%">
 </p>
 
-<p align="center"><sub>The full workspace: original text on the left, reviewed output on the right.</sub></p>
+<p align="center"><sub>An everyday email: original text on the left, reviewed output on the right.</sub></p>
 
 <table>
   <tr>
