@@ -1,35 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="420" viewBox="0 0 1440 420" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="520" viewBox="0 0 1440 520" role="img" aria-labelledby="title desc">
   <title id="title">Wexvo — Sensitive text. Local control.</title>
-  <desc id="desc">Offline Windows privacy workspace. Review, mask and restore before sharing with AI.</desc>
+  <desc id="desc">An offline Windows privacy workspace. A fictional email is transformed into placeholders for local review.</desc>
   <defs>
-    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#101923"/><stop offset="1" stop-color="#0b1018"/></linearGradient>
-    <radialGradient id="glow"><stop stop-color="#2474cc" stop-opacity=".26"/><stop offset="1" stop-color="#2474cc" stop-opacity="0"/></radialGradient>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#111c2b"/><stop offset="0.58" stop-color="#0c1520"/><stop offset="1" stop-color="#101c2a"/>
+    </linearGradient>
+    <radialGradient id="light"><stop stop-color="#318bed" stop-opacity=".2"/><stop offset="1" stop-color="#318bed" stop-opacity="0"/></radialGradient>
+    <linearGradient id="type" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#a5ceff"/><stop offset="1" stop-color="#69aaff"/></linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1c2a3c"/><stop offset="1" stop-color="#14202e"/></linearGradient>
+    <clipPath id="clip"><rect width="1440" height="520" rx="26"/></clipPath>
   </defs>
-  <rect width="1440" height="420" rx="24" fill="url(#bg)"/>
-  <rect x="1" y="1" width="1438" height="418" rx="23" fill="none" stroke="#2a3b50"/>
-  <ellipse cx="1180" cy="185" rx="370" ry="310" fill="url(#glow)"/>
-  <g font-family="Segoe UI,Arial,sans-serif">
-    <text x="70" y="78" fill="#91bdf4" font-size="19" font-weight="650" letter-spacing="7">WEXVO</text>
-    <text x="68" y="156" fill="#f0f5fc" font-size="54" font-weight="700">Sensitive text.</text>
-    <text x="68" y="220" fill="#f0f5fc" font-size="54" font-weight="700">Local control.</text>
-    <text x="70" y="270" fill="#a6b7cc" font-size="21">Review, mask and restore before sharing with AI.</text>
-    <circle cx="78" cy="335" r="5" fill="#78d6a0"/>
-    <text x="94" y="342" fill="#c0ccdc" font-size="17">Offline processing</text>
-    <circle cx="301" cy="335" r="2" fill="#526782"/>
-    <text x="321" y="342" fill="#c0ccdc" font-size="17">Windows</text>
-    <circle cx="420" cy="335" r="2" fill="#526782"/>
-    <text x="440" y="342" fill="#c0ccdc" font-size="17">Dutch &amp; English</text>
-    <rect x="882" y="87" width="444" height="246" rx="18" fill="#151f2c" stroke="#344963"/>
-    <circle cx="907" cy="111" r="4" fill="#526782"/><circle cx="923" cy="111" r="4" fill="#526782"/><circle cx="939" cy="111" r="4" fill="#526782"/>
-    <text x="908" y="159" fill="#91a7c0" font-size="13" letter-spacing="2">LOCAL REVIEW</text>
-    <text x="908" y="195" fill="#ced9e8" font-size="18">Contact</text>
-    <rect x="984" y="174" width="144" height="29" rx="5" fill="#173d2a"/>
-    <text x="996" y="195" fill="#8ff0b4" font-size="17">[PERSON A]</text>
-    <text x="908" y="240" fill="#ced9e8" font-size="18">Server</text>
-    <rect x="976" y="219" width="158" height="29" rx="5" fill="#173d2a"/>
-    <text x="988" y="240" fill="#8ff0b4" font-size="17">[PRIVATE_IP 1]</text>
-    <text x="1141" y="240" fill="#ced9e8" font-size="18">:443</text>
-    <path d="M908 272h392" stroke="#2b3b50"/>
-    <text x="908" y="304" fill="#91a7c0" font-size="15">Your context. Your review. Your decision.</text>
+  <g clip-path="url(#clip)">
+    <rect width="1440" height="520" fill="url(#background)"/>
+    <ellipse cx="1180" cy="180" rx="530" ry="430" fill="url(#light)"/>
+    <path d="M770 -80 1360 510M890 -80 1480 510M1010 -80 1600 510" stroke="#8bb9ef" stroke-opacity=".035" stroke-width="1"/>
+    <circle cx="1170" cy="267" r="242" fill="none" stroke="#79b0ef" stroke-opacity=".065"/>
+    <circle cx="1170" cy="267" r="299" fill="none" stroke="#79b0ef" stroke-opacity=".035"/>
+    <g font-family="Segoe UI,Arial,sans-serif">
+      <rect x="70" y="56" width="53" height="53" rx="13" fill="#1d3551" stroke="#4f7eaf" stroke-opacity=".7"/>
+      <path d="m80 72 6 23h5l6-15 5 15h5l6-23h-6l-4 15-5-15h-4l-5 15-4-15z" fill="#eef6ff"/>
+      <text x="141" y="94" fill="#eff6ff" font-size="35" font-weight="700" letter-spacing="6">WEXVO</text>
+      <text x="70" y="154" fill="#96aecb" font-size="14" font-weight="600" letter-spacing="3">YOUR OFFLINE PRIVACY WORKSPACE</text>
+      <text x="66" y="235" fill="#f4f8ff" font-size="73" font-weight="700" letter-spacing="-2">Sensitive text.</text>
+      <text x="66" y="315" fill="url(#type)" font-size="73" font-weight="700" letter-spacing="-2">Local control.</text>
+      <text x="70" y="362" fill="#b1c0d4" font-size="22">Review, mask and restore before sharing with AI.</text>
+      <text x="70" y="396" fill="#8298b2" font-size="19">Keep the conversation useful. Choose what you share.</text>
+
+      <rect x="840" y="101" width="520" height="310" rx="20" fill="#060e18" fill-opacity=".35"/>
+      <rect x="832" y="89" width="520" height="310" rx="20" fill="url(#card)" stroke="#405b7b"/>
+      <path d="M852 89h480" stroke="#86b9f3" stroke-opacity=".35"/>
+      <circle cx="859" cy="119" r="4" fill="#6b86a5"/><circle cx="875" cy="119" r="4" fill="#6b86a5"/><circle cx="891" cy="119" r="4" fill="#6b86a5"/>
+      <text x="916" y="125" fill="#d3dfed" font-size="16" font-weight="600">Local review</text>
+      <circle cx="1319" cy="119" r="4" fill="#85d9b0"/>
+      <path d="M833 144h518" stroke="#32465f"/>
+      <text x="859" y="177" fill="#8ca3bd" font-size="12" font-weight="600" letter-spacing="2">ORIGINAL EMAIL</text>
+      <text x="859" y="210" fill="#c5d1e1" font-size="23">Hi Maya Bennett,</text>
+      <text x="859" y="241" fill="#99aec6" font-size="18">maya.bennett@example.net</text>
+      <path d="M859 264h466" stroke="#35485e"/>
+      <text x="859" y="295" fill="#94d6b2" font-size="12" font-weight="600" letter-spacing="2">MASKED FOR YOUR REVIEW</text>
+      <text x="859" y="330" fill="#e0e9f4" font-size="23">Hi</text>
+      <rect x="894" y="306" width="155" height="33" rx="5" fill="#1c4934" stroke="#307654" stroke-opacity=".5"/>
+      <text x="905" y="330" fill="#a5f0c2" font-size="21">[PERSON A]</text>
+      <text x="1054" y="330" fill="#e0e9f4" font-size="23">,</text>
+      <rect x="859" y="351" width="122" height="30" rx="5" fill="#1c4934" stroke="#307654" stroke-opacity=".5"/>
+      <text x="870" y="373" fill="#a5f0c2" font-size="19">[EMAIL 1]</text>
+      <text x="1210" y="378" fill="#7d94ae" font-size="12">Illustrative preview</text>
+
+      <path d="M70 442h1282" stroke="#2c3e54"/>
+      <circle cx="77" cy="478" r="5" fill="#7dd7a7"/>
+      <text x="94" y="485" fill="#c6d4e5" font-size="18">Local processing</text>
+      <path d="M287 468v20" stroke="#40536c"/>
+      <text x="314" y="485" fill="#a2b5ce" font-size="18">Windows desktop</text>
+      <path d="M512 468v20" stroke="#40536c"/>
+      <text x="539" y="485" fill="#a2b5ce" font-size="18">Dutch &amp; English</text>
+      <text x="1083" y="485" fill="#819ab9" font-size="16">Review. Confirm. Share.</text>
+    </g>
   </g>
+  <rect x=".75" y=".75" width="1438.5" height="518.5" rx="25.25" fill="none" stroke="#344960" stroke-width="1.5"/>
 </svg>
