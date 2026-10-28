@@ -23,20 +23,20 @@ Built for Windows, with local Dutch and English detection and a practical workfl
 
 ## Watch the workflow
 
-**36 seconds · Real ChatGPT reply · English captions · No audio**
+**45 seconds · Live Chrome + Wexvo · 1920 × 1200 · English captions**
 
-https://github.com/user-attachments/assets/799c87f6-0f0b-4cf9-8cb5-5ed45c2f6072
+https://github.com/user-attachments/assets/2913a926-dce3-4e7a-b02d-8df1bd0e2ab0
 
 An ordinary email → green placeholders → ChatGPT → copy the answer twice → review restored values in blue → copy the finished email.
 
-[Download the MP4](assets/wexvo-chatgpt-workflow.mp4) · [Manual corrections, swaps and undo](assets/wexvo-walkthrough.mp4) · [Read the steps](#a-small-step-before-you-share)
+[Download the full-resolution MP4](assets/wexvo-live-chrome.mp4) · [Manual corrections, swaps and undo](assets/wexvo-walkthrough.mp4) · [Read the steps](#a-small-step-before-you-share)
 
-<sub>An edited demonstration with fictional email text, an actual ChatGPT response and the running Wexvo interface. Only the masked email was sent to ChatGPT. Wexvo performs masking and restoration locally.</sub>
+<sub>Recorded on Windows with Google Chrome and the Wexvo executable. The real ChatGPT answer is copied through the Windows clipboard; Wexvo opens the blue restoration review automatically. All example identities are fictional. Use fullscreen for the clearest text.</sub>
 
 <details>
 <summary>About this recording</summary>
 
-The browser and Wexvo were captured separately, with isolated clipboards, to avoid recording or changing the user's desktop. The exact copied ChatGPT response was transferred to the demo session, where real Qt copy events opened the restore review using the previously confirmed mapping. Captions, keyboard hints and cuts were added. This is a workflow demonstration, not a continuous recording or an end-to-end Windows clipboard compatibility test.
+This version uses a real desktop recording with the existing Wexvo executable and Chrome. Setup and idle time were cut, and English captions and a final close-up were added. The sequence from selecting the ChatGPT answer through the automatic appearance of the blue restore review is uncut. No separate clipboard bridge or recreated application screen is used. This demonstrates the recorded workflow on this machine; clipboard behaviour can vary between applications and systems.
 
 </details>
 
