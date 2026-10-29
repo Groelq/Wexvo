@@ -19,7 +19,7 @@ Wexvo helps you prepare sensitive text before pasting it into an AI assistant. I
 
 Built for Windows, with local Dutch and English detection and a practical workflow for technical logs, correspondence and document text.
 
-> **Private beta.** Automated detection can miss sensitive data or mask useful context. Always review before sharing.
+> **Beta.** Automated detection can miss sensitive data or mask useful context. Always review before sharing.
 
 ## Watch the workflow
 
@@ -168,7 +168,7 @@ Those accuracy audits still report failure. They are separate from the passing t
 
 **Windows · Python · PySide6 · spaCy · Regex · ONNX Runtime · Cython/MSVC · PyInstaller**
 
-Wexvo is under private development. This repository contains the project presentation and visual assets; application source code is not published here. Builds for repository collaborators are attached to [Releases](../../releases), with SHA-256 checksums. No public download or open-source licence is announced.
+Wexvo is in beta. This public repository contains the project presentation and visual assets; application source code is not published here. Windows builds are available from [Releases](../../releases), with SHA-256 checksums. Wexvo is not offered under an open-source licence.
 
 Next priorities: clean-machine Windows checks, code signing and usability feedback from realistic workflows.
 
