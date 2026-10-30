@@ -125,11 +125,12 @@ The existing **Restore Answer** button / **Ctrl+R** follows its separate editor 
 
 ## Validation and current status
 
-**Current build: 1.1.9 · Verified 29 October 2026**
+**Current build: 1.1.10 · Verified 30 October 2026**
 
 ### Measured on public, human-annotated data
 
-Measured on a sealed test split that was run once, after development, without tuning on it.
+Measured on a sealed test split that was run once, after development, without tuning on it. The figures below
+were measured on 1.1.9 and still apply: 1.1.10 changes packaging only and leaves every detection rule untouched.
 
 | Dataset | Fully masked |
 | :--- | ---: |
@@ -156,7 +157,7 @@ These are recorded local results, **not live CI, an independent certification or
 <details>
 <summary><strong>Known detection limitations and external evaluation</strong></summary>
 
-Build 1.1.9 adds detection of case and file numbers, completes half-detected names, and stops reading class paths, components and units in machine logs as names. It does not eliminate all detection errors.
+Build 1.1.10 changes packaging only: the entry point no longer ships any readable logic, and all 23 own modules are compiled to native code. Detection is unchanged from 1.1.9, which adds detection of case and file numbers, completes half-detected names, and stops reading class paths, components and units in machine logs as names. It does not eliminate all detection errors.
 
 An existing benchmark of **77 externally sourced, openly licensed fictional emails** was rechecked in both detection modes with fresh and shared sessions. On the reviewed fragments, **70 unwanted masks in the development split and 80–82 in the previously reviewed holdout remain** (the range reflects two build environments), alongside **8 incomplete known full-name occurrences in development and 0 in holdout**. Restore round-trip failures were zero. These counts are not document-level error rates or overall precision/recall; the annotations are partial, and this reused holdout is a regression set rather than a new independent evaluation.
 
