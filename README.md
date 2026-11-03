@@ -171,7 +171,7 @@ Those accuracy audits still report failure. They are separate from the passing t
 
 Wexvo is in beta. This public repository contains the project presentation and visual assets; application source code is not published here. Windows builds are available from [Releases](../../releases), with SHA-256 checksums. Wexvo is not offered under an open-source licence.
 
-Next priorities: clean-machine Windows checks, code signing and usability feedback from realistic workflows.
+Next priorities: clean-machine Windows checks and usability feedback from realistic workflows.
 
 ---
 
