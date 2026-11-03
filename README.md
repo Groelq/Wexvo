@@ -165,6 +165,16 @@ Those accuracy audits still report failure. They are separate from the passing t
 
 </details>
 
+## If Wexvo doesn't start
+
+- **"Windows protected your PC"**: choose **More info → Run anyway**. Check the SHA-256 on the release page first.
+- **Your antivirus blocks or removes the file**: some antivirus tools flag unsigned apps. Verify the SHA-256, then allow the file in your antivirus.
+- **Nothing happens, or it closes right away**: try the portable version (`Wexvo-Portable.zip`). Unzip it completely and run `Wexvo.exe` from the folder.
+- **An error about a missing DLL** (for example `VCRUNTIME140.dll`): install the *Microsoft Visual C++ Redistributable (x64)* from Microsoft's website.
+- **Still stuck?** [Open an issue](../../issues) with your Windows version and the exact error message. Never attach your own documents.
+
+You don't need to install Python: everything Wexvo needs is included.
+
 ## Project
 
 **Windows · Python · PySide6 · spaCy · Regex · ONNX Runtime · Cython/MSVC · PyInstaller**
