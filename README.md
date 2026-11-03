@@ -149,7 +149,7 @@ These datasets contain no Dutch citizen service numbers, IBANs or Dutch addresse
 | Unit suite | **395 tests per configuration**, passed with source and native cores, Max coverage on and off |
 | Full regression matrix | **86 jobs passed**: 54 detection jobs, 28 GUI jobs and 4 unit-suite jobs |
 | Windows packages | Both single-file and portable EXEs passed **--selftest** |
-| Packaging checks | **All 22 own modules** compiled to native code; no Wexvo Python source or bytecode in the package |
+| Packaging checks | **All 23 own modules** compiled to native code; no Wexvo Python source or bytecode in the package |
 | Temporary extraction | Single-file extraction removed after selftest; portable selftest created no extraction directory |
 
 These are recorded local results, **not live CI, an independent certification or a guarantee of perfect detection**.
